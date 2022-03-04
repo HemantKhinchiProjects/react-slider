@@ -16,6 +16,16 @@ export default function App() {
       <div className="section-center">
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;
+          let pos = 'nextSlide';
+          if (personIndex === index) {
+            pos = 'activeSlide';
+          }
+          if (
+            personIndex === index - 1 ||
+            (index === 0 && personIndex === people.length - 1)
+          ) {
+            pos = 'lastSlide';
+          }
           return (
             <article key={id}>
               <img src={image} alt={name} className="person-img" />
@@ -34,7 +44,7 @@ export default function App() {
             </article>
           );
         })}
-        <button className="prev">
+        <button className="prev" onClick={() => setIndex(index - 1)}>
           <svg
             width="15"
             height="15"
@@ -51,7 +61,7 @@ export default function App() {
             />
           </svg>
         </button>
-        <button className="next">
+        <button className="next" onClick={() => setIndex(index + 1)}>
           <svg
             width="15"
             height="15"

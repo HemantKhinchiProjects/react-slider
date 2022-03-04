@@ -162,7 +162,7 @@ Slider
   text-align: center;
   position: relative;
   display: flex;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .person-img {
   border-radius: 50%;
@@ -219,10 +219,7 @@ article h4 {
 .prev {
   left: 0;
 }
-.next,
-.prev svg {
-  fill: #fff;
-}
+
 .next {
   right: 0;
 }
@@ -237,19 +234,17 @@ article h4 {
     font-size: 1.5rem;
   }
 }
-svg.quote {
-  fill: var(--clr-primary-3);
-}
+
 article {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* opacity: 0; */
+  /*opacity: 0;*/
   transition: var(--transition);
 }
-/* article.activeSlide {
+article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
@@ -258,4 +253,11 @@ article.lastSlide {
 }
 article.nextSlide {
   transform: translateX(100%);
-} */
+}
+.next,
+.prev svg {
+  fill: #fff;
+}
+svg.quote {
+  fill: var(--clr-primary-3);
+}
