@@ -219,6 +219,10 @@ article h4 {
 .prev {
   left: 0;
 }
+.next,
+.prev svg {
+  fill: #fff;
+}
 .next {
   right: 0;
 }
