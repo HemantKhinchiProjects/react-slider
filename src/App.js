@@ -7,7 +7,7 @@ export default function App() {
   const [index, setIndex] = useState(0);
   useEffect(() => {
     const lastIndex = people.length - 1;
-    if (index > 0) {
+    if (index < 0) {
       setIndex(lastIndex);
     }
     if (index > lastIndex) {
